@@ -5,11 +5,12 @@ from datetime import datetime
 app = Flask(__name__)
 
 # Set up the database
-app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///posts.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'
 db = SQLAlchemy(app)
 
+# models
 
-
+# Routing
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -20,5 +21,6 @@ def honey():
     return render_template('honey.html')
 
 
+# Start loop
 if __name__ == "__main__":
     app.run(debug=True)
