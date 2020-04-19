@@ -8,7 +8,7 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/honey')
+@app.route('/honey', methods=['GET', 'POST'])
 def honey():
     return render_template('honey.html')
 
