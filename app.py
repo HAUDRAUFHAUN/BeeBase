@@ -16,6 +16,8 @@ class HoneyCharge(db.Model):
     honeytype = db.Column(db.String(100), nullable=False)
     reservoir_type = db.Column(db.String(50), nullable=False)
     weight = db.Column(db.Float, nullable=False)
+    date_created = db.Column(
+        db.DateTime, nullable=False, default=datetime.utcnow)
 
 
 # Routing
