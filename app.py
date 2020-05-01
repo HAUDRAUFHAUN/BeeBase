@@ -5,7 +5,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 # Set up the database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///honeybase.db'
 db = SQLAlchemy(app)
 
 # Models
