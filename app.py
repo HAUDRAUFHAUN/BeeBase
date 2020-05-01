@@ -8,10 +8,17 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'
 db = SQLAlchemy(app)
 
-# models
-class honeycharge():
+# Models
 
-    # Routing
+
+class HoneyCharge(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    honeytype = db.Column(db.String(100), nullable=False)
+    reservoir_type = db.Column(db.String(50), nullable=False)
+    weight = db.Column(db.Float, nullable=False)
+
+
+# Routing
 
 
 @app.route('/')
