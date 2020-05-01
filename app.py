@@ -9,8 +9,11 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'
 db = SQLAlchemy(app)
 
 # models
+class honeycharge():
 
-# Routing
+    # Routing
+
+
 @app.route('/')
 def home():
     return render_template('index.html')
